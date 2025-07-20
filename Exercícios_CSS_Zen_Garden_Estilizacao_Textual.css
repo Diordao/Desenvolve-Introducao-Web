@@ -1,0 +1,33 @@
+/* Color Theme Swatches in Hex */
+/*
+.principal { color: #203C73; }
+.Arquitetura-2-hex { color: #2E578C; }
+.Arquitetura-3-hex { color: #7C92A6; }
+.destaque { color: #F2762E; }
+.background { color: #BFAA8F; }
+*/
+
+html{
+    background: #BFAA8F;
+    color: #203C73;
+
+    font-size: 18px;
+    font-family: Helvetica, sans-serif;
+}
+
+p {
+    text-indent: 1em;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h1 {font-size: 1.8rem;}
+h2 {font-size: 1.4rem;}
+h3 {font-size: 1.2rem;}
+
+.summary {text-align: right;}
+.main p {line-height: 1.5;}
+
+abbr {font-variant: small-caps;}

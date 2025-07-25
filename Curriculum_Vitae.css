@@ -1,0 +1,142 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  padding-top: 72px;
+  color: #333;
+  background-color: #e6f0fa;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.3;     
+}
+
+.titulo {
+  padding-top: 6px;
+  padding-bottom: 4px;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+}
+
+.titulo + .conteudo {
+  margin-top: 12px;
+}
+ 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f5faff;
+  padding: 12px 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.anchor {
+  display: block;
+  height: 70px; 
+  margin-top: -70px;
+  visibility: hidden;
+}
+
+footer {
+  background-color: #c2d9f0;
+  padding: 16px;
+}
+
+.educacao, .experiencia {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.educacao .titulo,
+.experiencia .titulo {
+  flex: 0 0 100%;
+  margin-bottom: 10px;
+}
+
+.educacao .conteudo,
+.experiencia .conteudo {
+  flex: 1 1 33.333%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-left: 1px solid #ccc;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.educacao .conteudo:nth-of-type(2),
+.experiencia .conteudo:nth-of-type(2) {
+  border-left: none;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .anchor {
+    height: 250px;
+    margin-top: -250px;
+  }
+
+  body {
+    padding-top: 250px;
+  }
+
+  .educacao,
+  .experiencia {
+    flex-direction: row;
+  }
+
+  .educacao .conteudo,
+  .experiencia .conteudo {
+    flex: 1 1 100%;
+    border-left: none;
+    border-top: none;
+    text-align: left;
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    .educacao .conteudo,
+    .experiencia .conteudo {
+      flex: 1 1 50%;
+    }
+
+    .educacao .conteudo:nth-child(4),
+    .experiencia .conteudo:nth-child(4) {
+      flex: 1 1 100%;
+    }
+  }
+}  
